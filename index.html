@@ -1,0 +1,223 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Maker - Create Your Own News</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto px-3 sm:px-4 py-4 sm:py-8 max-w-6xl">
+        <!-- Header -->
+        <header class="text-center mb-6 sm:mb-10">
+            <h1 class="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-2 news-font">BREAK YOUR OWN NEWS</h1>
+            <p class="text-gray-600 text-sm sm:text-lg">Create and share your custom news headlines</p>
+        </header>
+        <div>
+          <marquee behavior="smooth" direction="left">Breaking News || Washington Post</marquee>
+        </div>
+        <div class="flex flex-col lg:flex-row gap-4 sm:gap-8">
+            <!-- Left Panel - Controls -->
+            <div class="w-full lg:w-1/3 bg-white rounded-xl shadow-lg p-4 sm:p-6 h-fit">
+                <h2 class="text-xl sm:text-2xl font-bold text-gray-800 mb-4 sm:mb-6 news-font">Create Your News</h2>
+                
+                <!-- Background Image Selection -->
+                <div class="mb-4 sm:mb-6">
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-700 mb-2 sm:mb-3">1. Select Background</h3>
+                    
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3 mb-3 sm:mb-4">
+                        <div class="aspect-video bg-cover bg-center rounded-lg cursor-pointer border-2 border-transparent hover:border-blue-500 transition-all"
+                             style="background-image: url('https://images.unsplash.com/photo-1574267432553-4b4628081c31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80')"
+                             data-bg="https://images.unsplash.com/photo-1574267432553-4b4628081c31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80">
+                        </div>
+
+                        <div class="aspect-video bg-cover bg-center rounded-lg cursor-pointer border-2 border-transparent hover:border-blue-500 transition-all"
+                             style="background-image: url('https://images.unsplash.com/photo-1584824486539-53bb4646bdbc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80')"
+                             data-bg="https://images.unsplash.com/photo-1584824486539-53bb4646bdbc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80">
+                        </div>
+
+                        <div class="aspect-video bg-cover bg-center rounded-lg cursor-pointer border-2 border-transparent hover:border-blue-500 transition-all"
+                             style="background-image: url('https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80')"
+                             data-bg="https://images.unsplash.com/photo-1504711434969-e33886168f5c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80">
+                        </div>
+
+                        <div class="aspect-video bg-cover bg-center rounded-lg cursor-pointer border-2 border-transparent hover:border-blue-500 transition-all"
+                             style="background-image: url('https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80')"
+                             data-bg="https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"></div>
+                        <div class="aspect-video bg-cover bg-center rounded-lg cursor-pointer border-2 border-transparent hover:border-blue-500 transition-all"
+                             style="background-image: url('https://images.unsplash.com/photo-1589652717521-10c0d092dea9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80')"
+                             data-bg="https://images.unsplash.com/photo-1589652717521-10c0d092dea9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"></div>
+                        <div class="aspect-video bg-cover bg-center rounded-lg cursor-pointer border-2 border-transparent hover:border-blue-500 transition-all"
+                             style="background-image: url('https://images.unsplash.com/photo-1583324113626-70df0f4deaab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80')"
+                             data-bg="https://images.unsplash.com/photo-1583324113626-70df0f4deaab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"></div>
+                    </div>
+                    
+                    <div class="mb-3 sm:mb-4">
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Or upload your own background</label>
+                        <div class="flex flex-col sm:flex-row sm:items-center gap-2">
+                            <input type="file" id="backgroundUpload" accept="image/*" class="hidden">
+                            <label for="backgroundUpload" class="cursor-pointer bg-blue-100 text-blue-700 px-3 sm:px-4 py-2 rounded-lg flex items-center justify-center sm:justify-start gap-2 hover:bg-blue-200 transition-colors text-sm sm:text-base">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                Upload BG
+                            </label>
+                            <span id="backgroundFileName" class="text-sm text-gray-500 truncate max-w-xs text-center sm:text-left">No file selected</span>
+                        </div>
+                    </div>
+                </div>
+                                
+                <!-- Content Image Selection -->
+                <div class="mb-4 sm:mb-6">
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-700 mb-2 sm:mb-3">2. Content Image</h3>
+                    
+                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-3 mb-3 sm:mb-4">
+                        <div class="aspect-video bg-cover bg-center rounded-lg cursor-pointer border-2 border-transparent hover:border-blue-500 transition-all"
+                             style="background-image: url('https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80')"
+                             data-content="https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"></div>
+                        <div class="aspect-video bg-cover bg-center rounded-lg cursor-pointer border-2 border-transparent hover:border-blue-500 transition-all"
+                             style="background-image: url('https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80')"
+                             data-content="https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"></div>
+                        <div class="aspect-video bg-cover bg-center rounded-lg cursor-pointer border-2 border-transparent hover:border-blue-500 transition-all"
+                             style="background-image: url('https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80')"
+                             data-content="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"></div>
+                        <div class="aspect-video bg-cover bg-center rounded-lg cursor-pointer border-2 border-transparent hover:border-blue-500 transition-all"
+                             style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80')"
+                             data-content="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"></div>
+                        <div class="aspect-video bg-cover bg-center rounded-lg cursor-pointer border-2 border-transparent hover:border-blue-500 transition-all"
+                             style="background-image: url('https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80')"
+                             data-content="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"></div>
+                        <div class="aspect-video bg-cover bg-center rounded-lg cursor-pointer border-2 border-transparent hover:border-blue-500 transition-all"
+                             style="background-image: url('https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80')"
+                             data-content="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"></div>
+                    </div>
+                    
+                    <div class="mb-3 sm:mb-4">
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Or upload your own content image</label>
+                        <div class="flex flex-col sm:flex-row sm:items-center gap-2">
+                            <input type="file" id="contentUpload" accept="image/*" class="hidden">
+                            <label for="contentUpload" class="cursor-pointer bg-blue-100 text-blue-700 px-3 sm:px-4 py-2 rounded-lg flex items-center justify-center sm:justify-start gap-2 hover:bg-blue-200 transition-colors text-sm sm:text-base">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                Upload Content
+                            </label>
+                            <span id="contentFileName" class="text-sm text-gray-500 truncate max-w-xs text-center sm:text-left">No file selected</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Headline Input -->
+                <div class="mb-4 sm:mb-6">
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-700 mb-2 sm:mb-3">3. Write Headline</h3>
+                    <textarea id="headlineInput" placeholder="Enter your breaking news headline" 
+                              class="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent h-20 sm:h-24 resize-none text-sm sm:text-base"></textarea>
+                    
+                    <div class="flex flex-col sm:flex-row sm:items-center justify-between mt-2 gap-2 sm:gap-0">
+                        <div class="flex items-center gap-2">
+                            <label class="text-xs sm:text-sm text-gray-600">Text Color:</label>
+                            <input type="color" id="headlineColor" value="#000000" class="w-6 h-6 sm:w-8 sm:h-8 rounded cursor-pointer">
+                        </div>
+                        
+                        <div class="flex items-center gap-2">
+                            <label class="text-xs sm:text-sm text-gray-600">Font Size:</label>
+                            <input type="range" id="headlineSize" min="24" max="72" value="24" class="w-16 sm:w-24">
+                            <span id="headlineSizeValue" class="text-xs sm:text-sm text-gray-600 w-10">24px</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Ticker Input -->
+                <div class="mb-4 sm:mb-6">
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-700 mb-2 sm:mb-3">4. Ticker Text</h3>
+                    <input type="text" id="tickerInput" placeholder="Enter ticker text (optional)" 
+                           class="w-full px-3 sm:px-4 py-2 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base">
+                    
+                    <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 mt-3 sm:mt-4">
+                        <div class="flex items-center gap-2">
+                            <input type="checkbox" id="enableTicker" checked class="rounded text-blue-600">
+                            <label for="enableTicker" class="text-xs sm:text-sm text-gray-600">Enable Ticker</label>
+                        </div>
+                        
+                        <div class="flex items-center gap-2">
+                            <label class="text-xs sm:text-sm text-gray-600">Speed:</label>
+                            <input type="range" id="tickerSpeed" min="10" max="60" value="30" class="w-16 sm:w-20">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Size Options -->
+                <div class="mb-4 sm:mb-6">
+                    <h3 class="text-base sm:text-lg font-semibold text-gray-700 mb-2 sm:mb-3">5. Image Size</h3>
+                    <div class="grid grid-cols-3 gap-1 sm:gap-2">
+                        <button data-size="16/9" class="py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors active text-xs sm:text-sm">16:9</button>
+                        <button data-size="1/1" class="py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors text-xs sm:text-sm">1:1</button>
+                        <button data-size="4/3" class="py-2 bg-gray-200 text-gray-700 rounded-lg hover:bg-gray-300 transition-colors text-xs sm:text-sm">4:3</button>
+                    </div>
+                </div>
+                
+                <!-- Action Buttons -->
+                <div class="flex flex-col sm:flex-row gap-2 sm:gap-3">
+                    <button id="previewBtn" class="flex-1 bg-blue-600 text-white py-2 sm:py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 text-sm sm:text-base">
+                        <i class="fas fa-eye"></i> Preview
+                    </button>
+                    <button id="downloadBtn" class="flex-1 bg-green-600 text-white py-2 sm:py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors flex items-center justify-center gap-2 text-sm sm:text-base">
+                        <i class="fas fa-download"></i> Download
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Right Panel -->
+      <div class="w-full lg:w-2/3">
+        <div class="bg-white rounded-xl shadow-lg p-4 sm:p-6">
+          <h2 class="text-xl sm:text-2xl font-bold text-gray-800 mb-3 sm:mb-4 news-font">Preview</h2>
+
+          <div class="bg-gray-800 overflow-hidden relative" id="previewContainer">
+            <div id="newsTemplate" class="news-template aspect-video w-full bg-cover bg-center rounded-none overflow-hidden"
+              style="background-image: url('https://images.unsplash.com/photo-1574267432553-4b4628081c31?...')">
+              <div class="gradient-overlay absolute inset-0"></div>
+              <div class="content-box">
+                <div id="contentPreview" class="image-placeholder">Content Image</div>
+              </div>
+              <div class="absolute top-2 sm:top-4 left-2 sm:left-4 flex items-center">
+                <div class="bg-red-600 text-white px-2 sm:px-3 py-1 news-font font-bold text-sm sm:text-base">LIVE</div>
+              </div>
+              <div id="tickerContainer" class="ticker-container absolute bottom-0 left-0 right-0 sm:py-0 rounded-none">
+                <div class="text-white inline-block items-center">
+                  <h2 class="text-2xl bg-red-600 text-white p-3 font-extrabold sm:text-sm md:text-sm sm:p-1">BREAKING NEWS</h2>
+                </div>
+                <div class="inset-0 flex p-3 sm:p-3 bg-gray-300">
+                  <h2 id="headlinePreview"
+                    class="text-black font-bold news-font leading-tight sm:p-1 text-shadow">
+                    SOMETHING WENT VIRAL ONLINE
+                  </h2>
+                </div>
+                <div class="flex items-center bg-yellow-600 tickWrap">
+                  <div class="bg-black text-sm py-2 items-center px-2 z-10 font-bold rounded-none" id="displayTime"></div>
+                  <div class="ticker-text news-font font-semibold text-sm sm:text-lg text-black">
+                    <span id="tickerPreview">• BREAKING: This is a sample ticker text •</span>
+                  </div>
+                </div>
+              </div>
+              <div class="absolute top-2 sm:top-4 right-2 sm:right-4 text-white text-xs sm:text-sm">
+                <div id="currentDate" class="text-right text-base font-bold"></div>
+              </div>
+            </div>
+          </div>
+          <div class="mt-3 sm:mt-4 text-center text-gray-600 text-xs sm:text-sm">
+            <p>Preview updates automatically. Click "Download" to save your image.</p>
+          </div>
+        </div>
+        <canvas id="newsCanvas" class="hidden"></canvas>
+      </div>
+
+    </div>
+
+    <!-- Footer -->
+        <footer class="mt-8 sm:mt-12 text-center text-gray-500 text-xs sm:text-sm">
+            <p>&copy; <span id="currentYear"></span> OceanTech Labs. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>

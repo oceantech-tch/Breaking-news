@@ -1,0 +1,304 @@
+/* Modern responsive typography and spacing for mobile-first (260px up to large phones) */
+/* Fonts: Inter for body, Oswald for news headings */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:ital,wght@0,300;0,400;0,600;1,400&display=swap');
+
+:root{
+    /* responsive font sizing */
+    --base-font: clamp(13px, 3vw, 18px);      /* body text */
+    --small-font: clamp(11px, 2.4vw, 14px);
+    --h1-font: clamp(18px, 6vw, 32px);
+    --h2-font: clamp(16px, 4.2vw, 24px);
+    --muted-font: clamp(12px, 2.6vw, 15px);
+
+    /* layout paddings */
+    --pad-xs: clamp(6px, 1.6vw, 8px);
+    --pad-sm: clamp(10px, 2.2vw, 14px);
+    --pad-md: clamp(12px, 2.6vw, 20px);
+
+    /* control preview sizing */
+    --content-box-w: clamp(22%, 28vw, 36%);
+    --content-box-h: clamp(22%, 26vh, 36%);
+}
+
+/* font families */
+.news-font {
+    font-family: 'Oswald', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    font-size: var(--base-font);
+    line-height: 1.35;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* general tweaks for container elements (mobile-first) */
+.container {
+    padding-left: var(--pad-sm);
+    padding-right: var(--pad-sm);
+}
+
+/* Ticker */
+.ticker-container {
+    color: white;
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    font-size: var(--small-font);
+}
+
+/* improved contrast for tickWrap */
+.tickWrap {
+    background: linear-gradient(90deg, #ffff00, #e6e605, #b6b60d);
+}
+
+/* Keep ticker animation but ensure responsive */
+.ticker-text {
+    display: inline-block;
+    padding-left: 100%;
+    animation: ticker 30s linear infinite;
+    will-change: transform;
+}
+
+@keyframes ticker {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.ticker-paused .ticker-text {
+    animation-play-state: paused;
+}
+
+/* Template */
+.news-template {
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    min-height: 180px; /* ensure visible on very small devices */
+    border-radius: 8px;
+}
+
+/* Subtle text shadow utility */
+.text-shadow {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+/* gradient overlay */
+.gradient-overlay {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.28) 0%, rgba(0,0,0,0.68) 100%);
+}
+
+/* content box (responsive percentages) */
+.content-box {
+    position: absolute;
+    right: 4%;
+    top: 12%;
+    width: var(--content-box-w);
+    height: var(--content-box-h);
+    border: 3px solid rgba(255,255,255,0.95);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+    background-clip: padding-box;
+}
+
+/* image placeholder */
+.image-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255,255,255,0.08);
+    color: white;
+    font-size: calc(var(--small-font) * 1.05);
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    padding: var(--pad-xs);
+}
+
+/* small adjustments for live badge */
+.news-template .bg-red-600 {
+    padding-left: clamp(6px, 1.8vw, 10px);
+    padding-right: clamp(6px, 1.8vw, 10px);
+    padding-top: calc(var(--pad-xs) / 1.2);
+    padding-bottom: calc(var(--pad-xs) / 1.2);
+    font-size: clamp(11px, 2.2vw, 14px);
+}
+
+/* headline inside preview */
+#headlinePreview {
+    font-size: clamp(14px, 3.3vw, 20px);
+    padding: calc(var(--pad-xs) * 0.6);
+    word-break: break-word;
+}
+
+/* ticker headline 'BREAKING NEWS' */
+.ticker-container h2:first-child {
+    font-size: clamp(14px, 3.6vw, 24px);
+    margin: 0;
+    padding: 0.25rem 0.5rem;
+}
+
+/* ticker text inside yellow bar */
+.tickWrap .ticker-text {
+    padding: 0.2rem 0.6rem;
+    font-size: clamp(12px, 3vw, 16px);
+}
+
+/* preview top date/time */
+#currentDate {
+    font-size: clamp(11px, 2.6vw, 14px);
+}
+
+/* responsiveness: keep content-box smaller on narrow screens */
+@media (max-width: 420px) {
+    :root{
+        --content-box-w: 34%;
+        --content-box-h: 28%;
+    }
+
+    .news-template { min-height: 160px; }
+    .container { padding-left: var(--pad-xs); padding-right: var(--pad-xs); }
+    .image-placeholder { font-size: var(--small-font); padding: 6px; }
+    .news-template .bg-red-600 { font-size: 12px; padding: 6px 8px; }
+    #headlinePreview { font-size: clamp(13px, 3.8vw, 18px); }
+    .ticker-text { font-size: clamp(11px, 3vw, 14px); }
+    .content-box { right: 3%; top: 10%; }
+}
+
+/* very narrow phones */
+@media (max-width: 360px) {
+    :root{
+        --base-font: 13px;
+        --small-font: 11px;
+        --h1-font: 20px;
+        --content-box-w: 40%;
+        --content-box-h: 30%;
+    }
+
+    .news-template { min-height: 150px; }
+    .container { padding-left: 8px; padding-right: 8px; }
+    .content-box { width: var(--content-box-w); height: var(--content-box-h); right: 2%; top: 9%; border-width: 2px; }
+    .image-placeholder { font-size: 11px; padding: 4px; }
+    .news-template .bg-red-600 { font-size: 11px; padding: 5px 7px; }
+    #headlinePreview { font-size: 14px; }
+    .ticker-text { padding-left: 80%; }
+}
+
+/* ultra narrow (old phones) */
+@media (max-width: 280px) {
+    :root{
+        --base-font: 12px;
+        --small-font: 10px;
+        --content-box-w: 46%;
+        --content-box-h: 32%;
+    }
+
+    .news-template { min-height: 140px; }
+    .content-box { width: var(--content-box-w); height: var(--content-box-h); right: 2%; top: 8%; }
+    #headlinePreview { font-size: 13px; }
+    .ticker-text { font-size: 10px; padding-left: 70%; }
+}
+
+/* Utility: ensure image aspect grid shows neat thumbnails on tiny screens */
+.grid .aspect-video {
+    min-height: 36px;
+    border-radius: 8px;
+}
+
+/* ensure buttons & inputs stay tappable on small screens */
+button, input[type="range"], label[for] {
+    touch-action: manipulation;
+}
+
+/* small helper for truncation spans */
+.truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* preserve existing rules that were in original file but improved slightly */
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&family=Inter:wght@400;600&display=swap');
+
+:root {
+  --base-font: clamp(13px, 3vw, 18px);
+  --headline-font: clamp(18px, 5vw, 32px);
+  --preview-headline: clamp(13px, 3.5vw, 20px);
+  --content-box-w: clamp(22%, 28vw, 36%);
+  --content-box-h: clamp(22%, 26vh, 36%);
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: var(--base-font);
+  -webkit-font-smoothing: antialiased;
+}
+
+.news-font {
+  font-family: 'Oswald', sans-serif;
+}
+
+.headline-title {
+  font-size: var(--headline-font);
+  line-height: 1.2;
+}
+
+/* Prevent stretch in content preview */
+#contentPreview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Fix download preview scaling */
+#newsTemplate {
+  aspect-ratio: 16/9;
+  position: relative;
+}
+
+.content-box {
+  position: absolute;
+  right: 4%;
+  top: 12%;
+  width: var(--content-box-w);
+  height: var(--content-box-h);
+  border: 3px solid rgba(255, 255, 255, 0.95);
+  overflow: hidden;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive headline fix */
+#headlinePreview {
+  font-size: var(--preview-headline);
+  color: black;
+  line-height: 1.2;
+  word-break: break-word;
+}
+
+/* Maintain proportional visuals across small devices */
+@media (max-width: 420px) {
+  :root {
+    --headline-font: clamp(16px, 5vw, 24px);
+    --content-box-w: 34%;
+    --content-box-h: 28%;
+  }
+}
+
+@media (max-width: 360px) {
+  :root {
+    --headline-font: clamp(14px, 5vw, 20px);
+    --content-box-w: 40%;
+    --content-box-h: 30%;
+  }
+}
